@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>Document</title>
+</head>
+<script>
+function bbb() {
+   
+    const token = String(Math.floor(Math.random() * 1000000)).padStart(6,"1")
+    let timer = 180
+    setInterval(() => {
+        if(timer >= 0) {
+            
+            document.getElementById("ddd").disabled = true
+        }
+        
+        else if(timer === 10) {
+            document.getElementById("ddd").disabled = false
+           
+        }
+        if(timer >= 0) {
+            document.getElementById("ccc").innerText = timer
+            timer = timer - 1  
+          
+        }
+    }, 500)
+    document.getElementById("aaa").innerText = token 
+    
+}
+
+
+</script>
+<body>
+    <div>타이머 만들기</div>
+    <span id="aaa">000000</span>
+    <button onclick="bbb()" id="111">인증번호 전송</button>
+    <br>
+    <span id="ccc">3:00</span>
+    <button id="ddd">인증완료</button>
+</body>
+</html>
+

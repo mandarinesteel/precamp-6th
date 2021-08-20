@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<script>
+function bbb() {
+    const token = String(Math.floor(Math.random() * 1000000)).padStart(6,"1")
+    document.getElementById("aaa").innerText = token 
+    
+}
+</script>
+<body>
+    <span id="aaa">000000</span>
+    <button onclick="bbb()">인증번호 전송</button>
+</body>
+</html>
+
+

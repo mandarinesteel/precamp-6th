@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <script>
+            function checkValidation() {
+            const email = document.getElementById("email").value     
+            const password1 = document.getElementById("password1").value
+            const password2 = document.getElementById("password2").value
+             
+            if(email !== "" && password1 !== "" && password2 !== ""){ 
+                document.getElementById("signup").style = "background-color: yellow;"
+            }else {
+                document.getElementById("signup").style = ""
+            }    
+            }
+            function aaa() {
+            const emailcheck = document.getElementById("email").value
+            if(emailcheck.includes("@") === false){
+                alert("잘못된 입력")
+        
+        
+
+            }
+        }    
+
+//리팩토링  << 
+
+        
+        
+    </script>
+</head>
+<!-- onchange 마우스 떼면 변하는 기능 html 요소 바뀌었을때 ( 텍스트 입력칸 변경 )  -->
+<!-- onkeyup 값 입력했을때 이벤트 발생  -->
+<body>
+    <input id = "email" type="text" placeholder="이메일을 입력해 주세요" onchange="checkValidation()" onkeyup="onchange()"><br>
+    <input id = "password1" type="password" placeholder="비밀번호를 입력해 주세요" onchange="checkValidation()" onkeyup="onchange()"><br>
+    <input id = "password2" type="password" placeholder="비밀번호를 확인해 주세요" onchange="checkValidation()" onkeyup="onchange()"><br>
+    <button id="signup" onclick="aaa()">회원가입</button>
+</body>
+</html>                 
